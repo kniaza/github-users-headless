@@ -148,7 +148,7 @@ button:focus-visible {
   gap: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 5em 0;
+  padding: 5em 0;
 }
 
 .userCard {
@@ -185,4 +185,55 @@ button:focus-visible {
 
 .userCard > p span {
   font-size: 2em;
+}
+
+@media screen and (max-width: 1100px) {
+  .user_lists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 95vw;
+  }
+
+  .user_lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .userCard > img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .header {
+    padding: 3em 0;
+    height: auto;
+  }
+
+  .header,
+  .header__content {
+    flex-direction: column;
+  }
+
+  .header__content > .search {
+    width: 100%;
+  }
+
+  .search > .search__results {
+    max-height: 50vh;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .user_lists {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .userCard > img {
+    width: 40vw;
+    height: 40vw;
+  }
 }
