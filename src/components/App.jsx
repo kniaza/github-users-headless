@@ -5,12 +5,9 @@ import { Header } from '@/components/Header';
 function App() {
   const { users } = useGetUsers();
 
-  console.log('@@', users);
-
   return (
     <div>
       <Header />
-      <section className="container">{/* TODO: search by user */}</section>
 
       <hr />
 
